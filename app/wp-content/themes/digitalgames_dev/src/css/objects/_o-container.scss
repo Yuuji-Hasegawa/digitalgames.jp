@@ -1,0 +1,48 @@
+@use '../settings' as setting;
+.o-container {
+  box-sizing: content-box;
+  padding-left: setting.spaces(base);
+  padding-right: setting.spaces(base);
+  margin-left: auto;
+  margin-right: auto;
+  &\:header,
+  &\:footer {
+    border-style: solid;
+    border-color: var(--c-border);
+  }
+  &\:header {
+    padding: 8px clamp(setting.spaces(2xs), calc(3.5vw - setting.spaces(base)), setting.spaces(base));
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-width: 0 0 1px;
+  }
+  &\:innerWrap,
+  .c-content-wrap,
+  .c-inner-wrap {
+    max-width: setting.itemsize(content);
+  }
+  &\:main,
+  &\:underPage {
+    max-width: setting.itemsize(wrapper);
+  }
+  &\:inner {
+    padding-top: setting.spaces(l);
+    padding-bottom: setting.spaces(l);
+    max-width: setting.itemsize(wrapper);
+  }
+  &\:footer {
+    border-width: 1px 0 0;
+    text-align: center;
+    font-size: setting.fontsize(xs);
+  }
+}
+.c-content-wrap,
+.c-inner-wrap {
+  margin-left: auto;
+  margin-right: auto;
+}
+.c-copyright {
+  font-family: setting.$font-family-alt;
+  padding: setting.spaces(base) 0;
+}

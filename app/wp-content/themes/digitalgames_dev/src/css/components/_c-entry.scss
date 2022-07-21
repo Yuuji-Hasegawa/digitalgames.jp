@@ -1,0 +1,95 @@
+@use '../settings' as setting;
+.c-entry {
+  line-height: setting.lineheight(body);
+  h2 {
+    font-weight: setting.fontweight(b);
+    line-height: setting.lineheight(heading);
+    font-size: clamp(setting.fontsize(l), calc((100vw - 650px) * 999), setting.fontsize(xl));
+    & + * {
+      margin-top: setting.spaces(l);
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      width: 60px;
+      height: 3px;
+      transform: translateX(-50%);
+      background: setting.brandcolor(base);
+    }
+  }
+  h3 {
+    font-weight: setting.fontweight(m);
+    line-height: setting.lineheight(heading);
+    background: setting.brandcolor(base);
+    font-size: clamp(setting.fontsize(m), calc((100vw - 650px) * 999), setting.fontsize(l));
+    margin: setting.spaces(m) 0;
+    &\:first {
+      margin-top: 0;
+    }
+  }
+  a {
+    display: inline-block;
+    text-decoration: underline;
+    overflow-wrap: break-word;
+    word-break: break-word;
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+    &.c-link\:redume {
+      display: block;
+      text-decoration: none;
+    }
+  }
+}
+.c-insert-img {
+  margin: setting.spaces(base) 0;
+}
+.c-author-pict {
+  width: 100px;
+  margin: 0 auto;
+  &\:single {
+    width: 230px;
+  }
+}
+.c-author-name {
+  font-weight: setting.fontweight(b);
+  font-size: setting.fontsize(m);
+  display: table;
+  margin: auto;
+  width: min(calc((100vw - 540px) * 999), 100%);
+  min-width: max-content;
+  &\:single {
+    font-size: setting.fontsize(l);
+  }
+}
+.c-redume {
+  margin-bottom: setting.spaces(base);
+  padding: setting.spaces(base) setting.spaces(base) 0 setting.spaces(base);
+  border: solid 1px var(--c-separator);
+}
+.c-author-box {
+  padding: setting.spaces(base);
+  border: solid 1px var(--c-separator);
+  background: var(--c-overlay);
+  margin-bottom: setting.spaces(l);
+  color: var(--c-dimmed);
+}
+.c-time {
+  color: var(--c-dimmed);
+  font-size: setting.fontsize(xs);
+  line-height: setting.lineheight(heading);
+  font-family: setting.$font-family-alt;
+}
+.c-company-cat {
+  color: var(--c-dimmed);
+  line-height: setting.lineheight(heading);
+  margin-bottom: setting.spaces(2xs);
+  display: table;
+  border: solid 1px;
+  max-width: max-content;
+  padding: 3px 5px;
+  font-weight: 500;
+}

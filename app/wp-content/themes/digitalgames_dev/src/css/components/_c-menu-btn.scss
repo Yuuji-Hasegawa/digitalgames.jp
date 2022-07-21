@@ -1,0 +1,63 @@
+@use '../settings' as setting;
+@use '../tools' as tool;
+.c-menu-btn {
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+  padding: 8px 10px;
+  &\:sidebar {
+    display: table;
+    margin: 8px clamp(setting.spaces(2xs), calc(3.5vw - setting.spaces(base)), setting.spaces(base)) 8px auto;
+  }
+}
+.c-sidebar {
+  position: fixed;
+  right: calc((240px + setting.spaces(base)) * -1);
+  top: 0;
+  background: var(--c-bg);
+  padding-left: setting.spaces(base);
+  z-index: 999;
+  box-shadow: 0 0 3px rgba(setting.brandcolor(base), 0.3);
+  width: 100%;
+  max-width: calc(240px + setting.spaces(base));
+  height: 100vh;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 1;
+  transition: all setting.animes(duration) setting.animes(timing);
+  &\:is-open {
+    right: 0;
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    transition: all setting.animes(duration) setting.animes(timing);
+  }
+}
+.c-sidebar-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 998;
+  background: setting.brandcolor(base);
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity setting.animes(duration) setting.animes(timing);
+  .c-sidebar\:is-open + & {
+    pointer-events: auto;
+    display: block;
+    visibility: visible;
+    opacity: setting.animes(opacity);
+    cursor: pointer;
+    transition: opacity setting.animes(duration) setting.animes(timing);
+  }
+}
+body.is-fixed {
+  position: fixed;
+  min-height: 100vh;
+  overflow: hidden;
+  min-width: 100vw;
+}

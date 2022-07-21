@@ -1,0 +1,95 @@
+@use '../settings' as setting;
+.o-stack {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  &\:xxs,
+  &\:bottomDetail {
+    & > * + * {
+      margin-top: setting.spaces(2xs);
+    }
+  }
+  &\:xs,
+  &\:topicFooter,
+  &\:topicContent,
+  &\:companyInner {
+    & > * + * {
+      margin-top: setting.spaces(xs);
+    }
+  }
+  &\:s,
+  &\:bottomLogo,
+  &\:topicInner,
+  &\:prof,
+  &\:companyItem {
+    & > * + * {
+      margin-top: setting.spaces(s);
+    }
+  }
+  &\:base {
+    & > * + * {
+      margin-top: setting.spaces(base);
+    }
+  }
+  &\:m,
+  &\:news,
+  &\:topics {
+    & > * + * {
+      margin-top: setting.spaces(m);
+    }
+  }
+  &\:announce {
+    font-size: setting.fontsize(xs);
+    color: var(--c-dimmed);
+    > li {
+      position: relative;
+      padding-left: setting.spaces(base);
+      &:before {
+        content: '※';
+        position: absolute;
+        left: 0;
+      }
+    }
+  }
+  &\:news,
+  &\:topics {
+    margin: 0 auto;
+    & + * {
+      margin-top: setting.spaces(m);
+    }
+  }
+  &\:news {
+    max-width: setting.itemsize(content);
+  }
+  &\:topicFooter {
+    font-size: setting.fontsize(xs);
+    color: var(--c-dimmed);
+  }
+  &\:bottomDetail {
+    text-align: left;
+    flex-shrink: 0;
+    max-width: calc(100% - 107px - setting.spaces(xs));
+  }
+  &\:bottomLogo {
+    max-width: setting.itemsize(content);
+    text-align: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: setting.spaces(l);
+    box-sizing: content-box;
+    padding-left: setting.spaces(base);
+    padding-right: setting.spaces(base);
+  }
+  &\:sidebar {
+    margin-left: calc(setting.spaces(base) * -1);
+    overflow-y: auto;
+    max-height: calc(100vh - 56px);
+  }
+  &\:topicInner,
+  &\:prof {
+    color: var(--c-txt);
+  }
+  &\:topicContent {
+  }
+}

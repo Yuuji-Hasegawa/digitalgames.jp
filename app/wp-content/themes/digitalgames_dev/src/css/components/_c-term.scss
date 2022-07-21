@@ -1,0 +1,50 @@
+@use '../settings' as setting;
+.c-term {
+  &__title {
+    font-size: setting.fontsize(m);
+    font-weight: setting.fontweight(b);
+  }
+  &__content {
+    margin: setting.spaces(base) 0;
+  }
+  &__memo {
+    text-align: right;
+    font-size: setting.fontsize(xs);
+  }
+}
+.c-section {
+  counter-reset: section;
+  &__item {
+    counter-increment: section;
+    &::before {
+      content: counter(section) '.';
+    }
+  }
+}
+.c-sub-section {
+  counter-reset: subsection;
+  &__item {
+    counter-increment: subsection;
+    &::before {
+      content: '(' counter(subsection) ')';
+    }
+  }
+}
+.c-section,
+.c-sub-section {
+  &__item {
+    position: relative;
+    padding-left: calc(setting.spaces(base) * 2);
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 2rem;
+      text-align: center;
+    }
+  }
+}
+.c-term-strong {
+  font-weight: setting.fontweight(b);
+  display: block;
+}

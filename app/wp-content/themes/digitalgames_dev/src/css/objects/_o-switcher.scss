@@ -1,0 +1,59 @@
+@use '../settings' as setting;
+.o-switcher {
+  display: flex;
+  flex-wrap: wrap;
+  &\:news {
+    gap: setting.spaces(xs);
+    align-items: flex-start;
+    > * {
+      font-family: setting.$font-family-alt;
+      font-weight: setting.fontweight(b);
+    }
+    > * + * {
+      flex-grow: 1;
+      flex-basis: calc((540px - 100vw) * 999);
+    }
+  }
+  &\:media {
+    gap: setting.spaces(m) setting.spaces(base);
+    .c-media-pict,
+    .c-media-content {
+      flex-shrink: 0;
+      width: 100%;
+    }
+    .c-media-pict {
+      border: solid 1px var(--c-border);
+      max-width: max(calc(540px - 100vw) * 999, 40%);
+    }
+    .c-media-content {
+      max-width: max(calc((540px - 100vw) * 999), calc(100% - 40% - setting.spaces(base)));
+    }
+  }
+  &\:halfQuart {
+    gap: setting.spaces(m) setting.spaces(base);
+    > * {
+      flex-shrink: 0;
+      width: 50%;
+      max-width: max(calc(810px - 100vw) * 999, calc((100% - setting.spaces(base) * 3) / 4));
+    }
+  }
+  &\:twoFive {
+    gap: setting.spaces(m) setting.spaces(base);
+    > * {
+      flex-shrink: 0;
+      width: 50%;
+      max-width: max(calc(810px - 100vw) * 999, calc((100% - setting.spaces(base) * 4) / 5));
+    }
+  }
+  &\:author {
+    gap: setting.spaces(s);
+    align-items: flex-start;
+    > * + * {
+      flex-grow: 1;
+      flex-basis: calc((540px - 100vw) * 999);
+    }
+  }
+}
+.c-topic-date {
+  font-family: setting.$font-family-alt;
+}

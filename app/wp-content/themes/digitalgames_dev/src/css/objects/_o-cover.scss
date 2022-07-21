@@ -1,0 +1,6 @@
+@use '../settings' as setting;
+.o-cover {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}

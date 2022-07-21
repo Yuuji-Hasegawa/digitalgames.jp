@@ -1,0 +1,50 @@
+@use '../settings' as setting;
+.c-btn {
+  background: transparent;
+  display: table;
+  padding: setting.spaces(xs) setting.spaces(s);
+  font-weight: setting.fontweight(b);
+  font-size: setting.fontsize(m);
+  appearance: none;
+  border: solid 1px var(--c-txt);
+  cursor: pointer;
+  outline: none;
+  color: var(--c-txt);
+  text-align: center;
+  &\:more {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 10rem;
+  }
+  &\:pager {
+    background: setting.brandcolor(base);
+    color: setting.lightcolor(bg);
+    border-color: setting.brandcolor(base);
+  }
+  &--submit {
+    color: setting.$accent;
+    border-color: setting.$accent;
+    padding-left: setting.spaces(m);
+    padding-right: setting.spaces(m);
+    transition: all setting.animes(duration) setting.animes(timing);
+    &:disabled {
+      border-color: var(--c-overlay);
+      pointer-events: none;
+      background: var(--c-overlay);
+      color: var(--c-dimmed);
+    }
+  }
+  &\:topicList {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    max-width: max-content;
+    align-items: center;
+    gap: setting.spaces(xs);
+  }
+  &\:copy {
+    flex-shrink: 0;
+    background: var(--c-txt);
+    color: var(--c-bg);
+  }
+}

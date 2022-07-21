@@ -1,0 +1,27 @@
+@use '../settings' as setting;
+@use '../tools' as tool;
+
+.o-cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: setting.spaces(base);
+  &\:center,
+  &\:ftNav,
+  &\:bottomSns {
+    justify-content: center;
+  }
+  &\:s,
+  &\:sns {
+    gap: setting.spaces(s);
+  }
+  &\:xs,
+  &\:ftNav {
+    gap: setting.spaces(xs);
+  }
+  &\:xxs {
+    gap: setting.spaces(2xs);
+  }
+  &\:sns {
+    margin-top: setting.spaces(xs);
+  }
+}

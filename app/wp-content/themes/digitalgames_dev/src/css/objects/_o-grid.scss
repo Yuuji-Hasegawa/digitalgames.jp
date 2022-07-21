@@ -1,0 +1,25 @@
+@use '../settings' as setting;
+.o-grid {
+  display: grid;
+  &\:pagination {
+    gap: setting.spaces(xs);
+    grid-template: auto / repeat(auto-fit, minmax(min((calc(375px - 100vw) * 999), 2em), auto));
+    justify-content: center;
+  }
+  &\:accept {
+    gap: setting.spaces(2xs);
+    grid-template-columns: max-content max-content auto;
+    margin: setting.spaces(base) 0;
+    cursor: pointer;
+    align-items: center;
+  }
+  &\:headAuthor {
+    grid-template-columns: 50px 1fr;
+    width: fit-content;
+    gap: setting.spaces(2xs);
+    font-size: setting.fontsize(xs);
+    line-height: setting.lineheight(heading);
+    margin-top: setting.spaces(l);
+    margin-bottom: setting.spaces(m);
+  }
+}

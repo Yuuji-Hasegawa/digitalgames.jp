@@ -1,0 +1,7 @@
+@use '../settings' as setting;
+.c-logo {
+  line-height: setting.lineheight(heading);
+  font-family: setting.$font-family-alt;
+  font-size: setting.fontsize(l);
+  font-weight: setting.fontweight(b);
+}

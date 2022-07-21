@@ -1,0 +1,51 @@
+@use '../settings' as setting;
+.o-has-icon {
+  display: inline-flex;
+  align-items: baseline;
+  gap: setting.spaces(3xs);
+  &\:center,
+  &\:time {
+    align-items: center;
+  }
+  &\:xs {
+    gap: setting.spaces(xs);
+  }
+  &\:xxs {
+    gap: setting.spaces(2xs);
+  }
+  &\:s {
+    gap: setting.spaces(s);
+  }
+  &\:time {
+    line-height: 1;
+    font-size: setting.fontsize(xs);
+    font-family: setting.$font-family-alt;
+    color: var(--c-dimmed);
+  }
+  &\:redume {
+    display: flex;
+    font-weight: setting.fontweight(b);
+    background: var(--c-overlay);
+    padding: setting.spaces(xs) setting.spaces(base);
+    margin: calc(setting.spaces(base) * -1) calc(setting.spaces(base) * -1) 0 calc(setting.spaces(base) * -1);
+    position: relative;
+    box-sizing: content-box;
+    width: 100%;
+    cursor: pointer;
+    align-items: center;
+  }
+  &\:redume-is-open {
+    margin-bottom: setting.spaces(base);
+    border-bottom: solid 1px var(--c-separator);
+  }
+}
+.c-redume-marker {
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform setting.animes(duration) setting.animes(timing);
+  &\:is-open {
+    transform: translateY(-50%) rotate(180deg);
+  }
+}

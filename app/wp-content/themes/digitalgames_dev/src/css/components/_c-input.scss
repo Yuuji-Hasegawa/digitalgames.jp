@@ -1,0 +1,52 @@
+@use '../settings' as setting;
+@use '../tools' as tool;
+.c-input {
+  border: 1px solid var(--c-border);
+  padding: setting.spaces(xs) setting.spaces(s);
+  outline: 1px transparent;
+  outline-offset: -1px;
+  width: 100%;
+  background: var(--c-overlay);
+  resize: none;
+  @include tool.placeholder(var(--c-separator));
+}
+.c-input-copy {
+  display: flex;
+  margin: setting.spaces(m) 0;
+  position: relative;
+}
+.c-copy-message {
+  color: var(--c-bg);
+  display: table;
+  position: absolute;
+  background: var(--c-txt);
+  text-align: center;
+  padding: setting.spaces(xs);
+  font-weight: setting.fontweight(m);
+  top: calc(100% + setting.spaces(s));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+}
+.c-checkbtn {
+  width: setting.fontsize(s);
+  height: setting.fontsize(s);
+  border: solid 1px var(--c-border);
+  background: var(--c-overlay);
+  position: relative;
+  &:checked {
+    background: setting.brandcolor(base);
+    &::after {
+      content: '';
+      position: absolute;
+      width: setting.fontsize(xs);
+      height: calc(setting.fontsize(xs) / 2);
+      border-width: 0 0px 2px 2px;
+      border-style: solid;
+      border-color: #fff;
+      transform: translate(-50%, -50%) rotate(-45deg);
+      top: calc(50% - 2px);
+      left: 50%;
+    }
+  }
+}

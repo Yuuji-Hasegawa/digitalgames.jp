@@ -1,0 +1,60 @@
+@use '../settings' as setting;
+.c-link {
+  display: block;
+  &\:menu {
+    padding: setting.spaces(xs) setting.spaces(base);
+  }
+  &\:tag {
+    font-weight: setting.fontweight(m);
+    display: inline-flex;
+    &:before {
+      content: '#';
+      margin-right: setting.spaces(2xs);
+    }
+  }
+  &\:breadcrumb {
+    display: inline-block;
+    padding: setting.spaces(xs);
+    font-size: setting.fontsize(xs);
+    font-weight: setting.fontweight(b);
+  }
+  &\:inline {
+    display: inline-block;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+  &\:ftNav {
+    color: inherit;
+    font-weight: setting.fontweight(m);
+    padding: setting.spaces(s);
+  }
+  &\:bottomCat {
+    align-items: center;
+    margin-top: setting.spaces(base);
+    font-size: setting.fontsize(s);
+    display: inline-flex;
+    gap: setting.spaces(3xs);
+  }
+  &\:sns {
+    line-height: 1;
+    font-size: 1.5rem;
+    color: inherit;
+  }
+  &\:bottomSns {
+    line-height: 1;
+    font-size: setting.fontsize(m);
+    color: inherit;
+  }
+  &\:personSns {
+    color: inherit;
+  }
+}
+.c-topic-cat {
+  color: setting.$accent;
+  font-weight: setting.fontweight(m);
+  font-size: setting.fontsize(xs);
+  line-height: setting.lineheight(heading);
+}
+.c-company-img {
+  border: solid 1px var(--c-border);
+}

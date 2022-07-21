@@ -1,0 +1,65 @@
+{
+    "site": {
+        "name": "digitalgames.jp",
+        "keywords": [
+            "digitalgames",
+            "デジタルゲーム学科",
+			"dgob",
+			"dgog",
+			"デジタルゲーム学科 私設OB会"
+        ],
+        "description": "デジタルゲーム学科 私設OB会",
+        "copy": "Hello, World",
+        "lead": "Just another BBN site",
+        "gtm": "GTM-N6LB9NN",
+        "copyright": "©︎ digitalgames.jp",
+        "theme": "#dfdfdf"
+    },
+	"sns": {
+		"fb": "https://www.facebook.com/bluebnose/",
+		"tw": "https://twitter.com/bluebnose",
+		"instagram": "https://www.instagram.com/bluebnose/",
+		"twcreator": "bluebnose",
+		"twsite": "bluebnose"
+	},
+    "author": {
+        "name": "サンプル 太郎",
+        "desc": "サンプル太郎の自己紹介。サンプルを表示しています",
+        "fb": "https://www.facebook.com/bluebnose/",
+		"tw": "https://twitter.com/bluebnose",
+		"instagram": "https://www.instagram.com/bluebnose/",
+        "url": "https://bbns.jp"
+    },
+	"company": {
+		"name": "仮面ライター",
+		"owner": "長谷川 雄治",
+		"zip": "567-0005",
+		"address": "茨木市五日市2-17-4",
+		"mail": {
+			"primary": "info@digitalgames.jp",
+			"sendonly": "noreply@digitalgames.jp"
+		},
+		"tel": "000-0000-0000",
+		"fax": "000-0000-0000",
+		"birth": "2022年00月00日",
+		"open": "09:00",
+		"close": "19:00",
+		"dayoff": "土日・祝祭日",
+		"service": [
+			"Webサイト制作",
+			"Web/SNS活用サポート",
+			"コンテンツ制作",
+			"Webコンサルティング",
+			"ドメイン、サーバ取得代行"
+		]
+	},
+	"term": {
+		"domain": "digitalgames.jp",
+		"name": "仮面ライター",
+		"acount": "長谷川 雄治",
+		"nouse": "6ヶ月以上",
+		"noreply": "30日間以上",
+		"payterm": "12ヶ月間",
+		"court": "大阪地方裁判所"
+	}
+}
