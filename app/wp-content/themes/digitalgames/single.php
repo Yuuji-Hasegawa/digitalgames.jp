@@ -68,7 +68,7 @@ if (have_posts()):?>
                     srcset="<?php echo get_template_directory_uri();?>/img/hasegawa.webp"
                     type="image/webp" />
                 <img src="<?php echo get_template_directory_uri();?>/img/hasegawa.jpg"
-                    loading="lazy" decoding="async" alt="" width="100%" height="100%" alt="" />
+                    loading="lazy" decoding="async" alt="" width="100%" height="100%" />
             </picture>
         </div>
         <dl class="o-stack o-stack:xs">
@@ -82,7 +82,7 @@ if (have_posts()):?>
                 アマチュアの物書きとして、執筆活動のほか、言語や人間社会、記号論を理系、文系の両方の立場から考えるのも最近の趣味。
                 <div class="o-cluster o-cluster:sns">
                     <a href="https://www.facebook.com/yuuji.hasegawa" class="c-link c-link:sns" target="_blank"
-                        rel="noopener">
+                        rel="noopener" aria-label="go to Facebook">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512">
                             <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                             <path
@@ -90,8 +90,8 @@ if (have_posts()):?>
                                 fill="currentColor" />
                         </svg>
                     </a>
-                    <a href="https://twitter.com/kamenwriter01" class="c-link c-link:sns" target="_blank"
-                        rel="noopener">
+                    <a href="https://twitter.com/kamenwriter01" class="c-link c-link:sns" target="_blank" rel="noopener"
+                        aria-label="go to Twitter">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                             <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                             <path
@@ -100,7 +100,7 @@ if (have_posts()):?>
                         </svg>
                     </a>
                     <a href="https://www.instagram.com/kamenwriter/" class="c-link c-link:sns" target="_blank"
-                        rel="noopener">
+                        rel="noopener" aria-label="go to instagram">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                             <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                             <path
@@ -108,7 +108,8 @@ if (have_posts()):?>
                                 fill="currentColor" />
                         </svg>
                     </a>
-                    <a href="https://kamenwriter.com/" class="c-link c-link:sns" target="_blank" rel="noopener">
+                    <a href="https://kamenwriter.com/" class="c-link c-link:sns" target="_blank" rel="noopener"
+                        aria-label="go to kamenwriter.com">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512">
                             <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
                             <path
