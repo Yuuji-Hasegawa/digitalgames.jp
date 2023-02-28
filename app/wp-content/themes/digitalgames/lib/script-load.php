@@ -54,6 +54,8 @@ function add_async($tag, $handle)
     $jsonLD = '<script type="application/ld+json">';
     if (is_single()) {
         $jsonLD .= '[' . json_encode(set_bread_json()) . ',' . json_encode(set_content_json()) . ']';
+    } elseif (is_front_page()) {
+        $jsonLD .= '[' . json_encode(set_front_json()) . ',' . json_encode(set_bread_json()) . ']';
     } else {
         $jsonLD .= json_encode(set_bread_json());
     }
