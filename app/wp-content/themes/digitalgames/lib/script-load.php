@@ -43,6 +43,13 @@ function recatcha_hidden()
     wp_deregister_script('google-recaptcha');
 }
 add_action('wp_enqueue_scripts', 'recatcha_hidden', 100, 0);
+
+function remove_classic_theme_style()
+{
+    wp_dequeue_style('classic-theme-styles');
+}
+add_action('wp_enqueue_scripts', 'remove_classic_theme_style');
+
 add_filter('script_loader_tag', 'add_async', 10, 2);
 
 function add_async($tag, $handle)
