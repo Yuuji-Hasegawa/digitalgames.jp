@@ -51,7 +51,7 @@
             </svg>
         </button>
     </header>
-    <div class="c-sidebar" id="sidebar" aria-hidden="true">
+    <div class="c-sidebar" id="sidebar" aria-hidden="true" tabindex="-1">
         <button class="c-menu-btn c-menu-btn:sidebar" type="button" aria-label="menu close" aria-controls="headMenu"
             aria-expanded="false">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">

@@ -1,12 +1,11 @@
 @use '../settings' as setting;
 .o-frame {
-  padding-bottom: calc((9 / 16) * 100%);
   position: relative;
   aspect-ratio: 16/9;
   display: block;
+  width: 100%;
   &\:square {
     aspect-ratio: 1/1;
-    padding-bottom: calc((1 / 1) * 100%);
   }
   &\:round {
     > * {

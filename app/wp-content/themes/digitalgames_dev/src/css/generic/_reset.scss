@@ -23,6 +23,9 @@
   box-sizing: border-box;
   overflow-wrap: break-word;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -75,4 +78,11 @@ svg {
   vertical-align: -0.125em;
   box-sizing: content-box;
   width: auto;
+}
+details > summary {
+  list-style: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
 }

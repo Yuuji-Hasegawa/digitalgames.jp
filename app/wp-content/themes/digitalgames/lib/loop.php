@@ -45,9 +45,9 @@ function get_related_person()
             $the_query->the_post();
             $output .= '<a class="o-stack o-stack:prof" href="' . get_the_permalink() .'"><picture class="o-frame o-frame:square o-frame:round">';
             if (has_post_thumbnail()) {
-                $output .= '<img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="' . get_the_post_thumbnail_url(get_the_ID(), 'full') .'" decoding="async" alt="" width="100%" height="100%" />';
+                $output .= '<img src="' . get_the_post_thumbnail_url(get_the_ID(), 'full') .'" loading="lazy" decoding="async" alt="" width="100%" height="100%" />';
             } else {
-                $output .= '<source data-srcset="' . get_template_directory_uri() . '/img/profile.avif" type="image/avif" /><source data-srcset="' . get_template_directory_uri() . '/img/profile.webp" type="image/webp" /><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" data-src="' . get_template_directory_uri() . '/img/profile.png" alt="" />';
+                $output .= '<source srcset="' . get_template_directory_uri() . '/img/profile.avif" type="image/avif" /><source srcset="' . get_template_directory_uri() . '/img/profile.webp" type="image/webp" /><img src="' . get_template_directory_uri() . '/img/profile.png" loading="lazy" decoding="async" alt="" width="100%" height="100%" />';
             }
             $output .= '</picture><span class="c-person-name">' . get_the_title() . '</span></a>';
         }

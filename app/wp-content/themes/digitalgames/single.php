@@ -1,17 +1,17 @@
-<?php get_header(); if (have_posts()):?>
+<?php get_header();
+if (have_posts()):?>
 <div class="c-inner-wrap">
     <header class="o-grid o-grid:headAuthor">
         <a href="#authorInfo">
             <picture class="o-frame o-frame:square">
                 <source
-                    data-srcset="<?php echo get_template_directory_uri();?>/img/hasegawa.avif"
+                    srcset="<?php echo get_template_directory_uri();?>/img/hasegawa.avif"
                     type="image/avif" />
                 <source
-                    data-srcset="<?php echo get_template_directory_uri();?>/img/hasegawa.webp"
+                    srcset="<?php echo get_template_directory_uri();?>/img/hasegawa.webp"
                     type="image/webp" />
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                    data-src="<?php echo get_template_directory_uri();?>/img/hasegawa.jpg"
-                    alt="" />
+                <img src="<?php echo get_template_directory_uri();?>/img/hasegawa.jpg"
+                    loading="lazy" decoding="async" alt="" width="100%" height="100%" />
             </picture>
         </a>
         <div class="o-stack o-stack:xxs">
@@ -49,7 +49,8 @@
     </article>
     <?php endwhile;?>
     <div class="o-stack o-stack:xxs">
-        <?php echo get_post_cat(); echo get_post_tags()?>
+        <?php echo get_post_cat();
+    echo get_post_tags()?>
     </div>
     <div class="c-input-copy">
         <input id="shareURL" class="c-input c-input:share" type="text"
@@ -61,14 +62,13 @@
         <div class="c-author-pict">
             <picture class="o-frame o-frame:square">
                 <source
-                    data-srcset="<?php echo get_template_directory_uri();?>/img/hasegawa.avif"
+                    srcset="<?php echo get_template_directory_uri();?>/img/hasegawa.avif"
                     type="image/avif" />
                 <source
-                    data-srcset="<?php echo get_template_directory_uri();?>/img/hasegawa.webp"
+                    srcset="<?php echo get_template_directory_uri();?>/img/hasegawa.webp"
                     type="image/webp" />
-                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                    data-src="<?php echo get_template_directory_uri();?>/img/hasegawa.jpg"
-                    alt="" />
+                <img src="<?php echo get_template_directory_uri();?>/img/hasegawa.jpg"
+                    loading="lazy" decoding="async" alt="" width="100%" height="100%" alt="" />
             </picture>
         </div>
         <dl class="o-stack o-stack:xs">
@@ -121,4 +121,6 @@
         </dl>
     </footer>
 </div>
-<?php endif;get_footer();
+<?php endif;
+get_footer();
+?>

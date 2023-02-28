@@ -19,7 +19,7 @@
         </svg>
       </button>
     </header>
-    <div class="c-sidebar" id="sidebar" aria-hidden="true">
+    <div class="c-sidebar" id="sidebar" aria-hidden="true" tabindex="-1">
       <button class="c-menu-btn c-menu-btn:sidebar" type="button" aria-label="menu close" aria-controls="headMenu" aria-expanded="false">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
           <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. -->
@@ -88,15 +88,15 @@
           <a class="o-switcher o-switcher:media">
             <span class="c-media-pict">
               <picture class="o-frame">
-                <source type="image/avif" data-srcset="img/thumb.avif" />
-                <source type="image/webp" data-srcset="img/thumb.webp" />
+                <source type="image/avif" srcset="img/thumb.avif" />
+                <source type="image/webp" srcset="img/thumb.webp" />
                 <img
-                  src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
-                  data-src="img/thumb.png"
-                  decoding="async"
-                  alt=""
+                  src="img/thumb.png"
                   width="100%"
                   height="100%"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
                 />
               </picture>
             </span>
